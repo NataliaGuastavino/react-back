@@ -1,12 +1,9 @@
-.title {
-    font-size: 10px;
-    align-items: right;
-}
-.menu {
+.menu{
     display: flex;
     justify-content: space-around;
 }
 
-.button {
-    font-size: 5px;
+.title {
+display: grid;
+text-align: start;
 }

@@ -1,30 +1,39 @@
 import React from 'react'
-import './Navbar.css'
-import CartWidget from '../cartWidget/CartWidget'
-import Button from '../Button/Button'
+import "./NavBar.css";
+import { Navbar, Container, Nav } from "react-bootstrap";
+//import {Button} from "../Button/Button"
+import { CartWidget } from '../CartWidget/CartWidget'
 
-const NavBar = () => {
-    return (
-        <nav className='Navbar'>
-            <div className='title'>Port of Mokha</div>
-            <div className='menu'>
-                <Button
-                    color="black"
-                    handleClick={() => console.log('cofee')}
-                >Coffe</Button>
-                <Button
-                    color="black"
-                    handleClick={() => console.log('Brew Guides')}
-                >Brew Guides</Button>
-                <Button
-                    color="black"
-                    handleClick={() => console.log('All products')}
-                >All products</Button>
+export function NavBar() {
+  return (
+    <Navbar bg="light" variant="light">
+      <Container>
+        <div className='Title'>
+        <Navbar.Brand href="#home">Port of Mokha</Navbar.Brand>
+        </div>
+        <Nav className="menu">
+          <Nav.Link href="#Cofee">Cofee</Nav.Link>
+          <Nav.Link href="#Brew Guides">Brew Guides</Nav.Link>
+          <Nav.Link href="#All products">All products</Nav.Link>
+        </Nav>
+        
+        <Nav>
+          <CartWidget />
+        </Nav>
 
-                <CartWidget />
-            </div>
-        </nav>
-    )
+      </Container>
+    </Navbar>
+  );
 }
 
-export default NavBar
+
+
+{/*          <Button color="black" handleClick={() => console.log("cofee")}>
+            Coffe
+          </Button>
+          <Button color="black" handleClick={() => console.log("Brew Guides")}>
+            Brew Guides
+          </Button>
+          <Button color="black" handleClick={() => console.log("All products")}>
+            All products
+</Button>*/}
