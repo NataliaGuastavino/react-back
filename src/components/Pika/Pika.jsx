@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Pika.css"
 
-export const Pika = () =>{
+//export const Pika = () =>{
 
     const [pokemon, setPokemon] = useState ("");
     

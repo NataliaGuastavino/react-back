@@ -2,37 +2,35 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
 import { NavBar } from './components/NavBar/NavBar';
-import { Container } from "react-bootstrap";
+//import { Container } from "react-bootstrap";
 import { ItemCount } from "./components/ItemCount/ItemCount";
-import { Pika } from "./components/Pika/Pika";
+import {ItemDetailContainer} from "./components/ItemDetailContainer/ItemDetailContainer";
+//import { Pika } from "./components/Pika/Pika";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Navigate,
+  Route,  
+} from "react-router-dom"
 
 function App() {
   return (
-    <>
-      <div className="App">
-        <header className="menu">
-          <NavBar />
-        </header>
-        <main>
-          {/* Acá iriía el resto de la app */}
 
-          <ItemListContainer greeting="Hola mundo" />
+    <div className='App'>
+      <Router>
+        <NavBar/>
+          <Routes>
+            <Route path ="/"  element={<ItemListContainer/>}/>
+            <Route path ="/productos/:categoryId"  element={<ItemListContainer/>}/>
+            <Route path ="/detail/:itemId"  element={<ItemDetailContainer/>}/>
+            <Route path ="/counter" element={<ItemCount/>}/>
+            {/*<Route path="/pika" element={<Pika/>}/>*/}
+            <Route path="*" element={<Navigate to= "/"/>}/>
+          </Routes>
+      </Router>
+    </div> 
 
-          <Container>
-            <main>Hola, soy el contenido!</main>
-          </Container>
-
-          <ItemCount/>
-          <Pika/>
-
-
-          <Container>Hola, soy el footer</Container>
-
-        </main>
-      </div>
-
-    </>
-  );
+    );
 }
 
 export default App;

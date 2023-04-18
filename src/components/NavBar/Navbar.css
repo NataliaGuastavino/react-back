@@ -1,9 +1,0 @@
-.menu{
-    display: flex;
-    justify-content: space-around;
-}
-
-.title {
-display: grid;
-text-align: start;
-}
