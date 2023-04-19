@@ -1,11 +1,12 @@
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
-import { NavBar } from './components/NavBar/NavBar';
-//import { Container } from "react-bootstrap";
-import { ItemCount } from "./components/ItemCount/ItemCount";
 import {ItemDetailContainer} from "./components/ItemDetailContainer/ItemDetailContainer";
+import { NavBar } from './components/NavBar/NavBar';
+import { ItemCount } from "./components/ItemCount/ItemCount";
+//import { Container } from "react-bootstrap";
 //import { Pika } from "./components/Pika/Pika";
+
 import {
   BrowserRouter as Router,
   Routes,

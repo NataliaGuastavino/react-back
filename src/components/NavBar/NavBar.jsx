@@ -14,10 +14,10 @@ export function NavBar() {
                 
                 <Nav className="menu ml-auto">
                     <Nav.Link as={Link} to="/productos/merchandising">Merchandising</Nav.Link>
-                    <Nav.Link as={Link} to="/productos/cofee">Cofee</Nav.Link>
-                    <Nav.Link href="#Cofee">Cofee</Nav.Link>
+                    <Nav.Link as={Link} to="/productos/coffee">Coffee</Nav.Link>
+{/*                 <Nav.Link href="#Cofee">Coffee</Nav.Link>
                     <Nav.Link href="#Brew Guides">Brew Guides</Nav.Link>
-                    <Nav.Link href="#All products">All products</Nav.Link>
+                    <Nav.Link href="#All products">All products</Nav.Link>*/}
                 </Nav>
 
                 <Nav>

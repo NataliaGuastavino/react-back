@@ -29,7 +29,7 @@ export const stock = [
         description: "Bella Donovan is the cashmere sweater of our blends—comforting, cozy, and enveloping.",
         price: "12€",
         image: '/img/4.png',
-        category: "cofee"
+        category: "coffee"
     },
     {
         id: 5,
@@ -37,7 +37,7 @@ export const stock = [
         description: "Our blends are carefully chosen from two or three coffees for their harmonious relationship in the cup.",
         price: "40€",
         image: '/img/5.png',
-        category: "coffe"
+        category: "coffee"
     },
     {
         id: 6,
@@ -45,7 +45,7 @@ export const stock = [
         description: "We often call this trio of African coffees the single origin lover’s blend. Yet the appeal of Three Africas spans more than any one kind of coffee.",
         price: "14€",
         image: '/img/6.png',
-        category: "cofee"
+        category: "coffee"
     },
     {
         id: 7,
@@ -53,7 +53,7 @@ export const stock = [
         description: "Make heavenly iced or hot lattes in seconds, anywhere life leads you.",
         price: "25€",
         image: '/img/7.png',
-        category: "merchandising"
+        category: "coffee"
     },
     {
         id: 8,
