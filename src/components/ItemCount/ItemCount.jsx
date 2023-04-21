@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import './ItemCount.css'
+import { IoIosAdd } from 'react-icons/io';
+import { RiSubtractFill } from 'react-icons/ri' ;
+import { RiRefreshLine } from 'react-icons/ri';
 
 export const ItemCount = () =>{
 
@@ -24,9 +27,9 @@ export const ItemCount = () =>{
         <>
             <h4>Cantidad: {counter}</h4>
             <div>
-                <button onClick={sumar}>➕</button>
-                <button onClick={restar}>➖</button>
-                <button onClick={resetear}>🔂</button>
+                <button onClick={sumar}><IoIosAdd /></button>
+                <button onClick={restar}><RiSubtractFill /></button>
+                <button onClick={resetear}><RiRefreshLine /></button>
             </div>
         </>
     )
