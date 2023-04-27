@@ -5,7 +5,8 @@ export const stock = [
         description: "Calling all slow sippers: this staff favorite is a lifesaver in or out of the home. Insulated to keep hot coffee hot and cold drinks refreshing.",
         price: "35€" ,
         image: ('/img/1.png'),
-        category: "merchandising"
+        category: "merchandising",
+        stock: 20
     },
     {
         id: 2,
@@ -13,7 +14,8 @@ export const stock = [
         description: "Perfect-sized travel mug. Comfy handle.",
         price: "28€",
         image: '/img/2.png',
-        category: "merchandising"
+        category: "merchandising",
+        stock: 20
     },
     {
         id: 3,
@@ -21,7 +23,8 @@ export const stock = [
         description: "This reusable to-go cup´s natural fibers mean you can savor your hot beverages without weird flavors. Goodbye to metallic, aluminum, or plastic tastes that taint your coffee.",
         price: "18€",
         image: '/img/3.png',
-        category: "merchandising"
+        category: "merchandising",
+        stock: 20
     },
     {
         id: 4,
@@ -29,7 +32,8 @@ export const stock = [
         description: "Bella Donovan is the cashmere sweater of our blends—comforting, cozy, and enveloping.",
         price: "12€",
         image: '/img/4.png',
-        category: "coffee"
+        category: "coffee",
+        stock: 20
     },
     {
         id: 5,
@@ -37,7 +41,8 @@ export const stock = [
         description: "Our blends are carefully chosen from two or three coffees for their harmonious relationship in the cup.",
         price: "40€",
         image: '/img/5.png',
-        category: "coffee"
+        category: "coffee",
+        stock: 20
     },
     {
         id: 6,
@@ -45,7 +50,8 @@ export const stock = [
         description: "We often call this trio of African coffees the single origin lover’s blend. Yet the appeal of Three Africas spans more than any one kind of coffee.",
         price: "14€",
         image: '/img/6.png',
-        category: "coffee"
+        category: "coffee",
+        stock: 20
     },
     {
         id: 7,
@@ -53,7 +59,8 @@ export const stock = [
         description: "Make heavenly iced or hot lattes in seconds, anywhere life leads you.",
         price: "25€",
         image: '/img/7.png',
-        category: "coffee"
+        category: "coffee",
+        stock: 20
     },
     {
         id: 8,
@@ -61,7 +68,8 @@ export const stock = [
         description: "A set for the latte lover: a 48 g jar of Craft Instant Espresso, the Subminimal Nanofoamer, and a Blue Bottle Cupping Spoon.",
         price: "35€",
         image: '/img/8.png',
-        category: "merchandising"
+        category: "merchandising",
+        stock: 20
     },
     {
         id: 9,
@@ -69,7 +77,8 @@ export const stock = [
         description: "The ideal pairing for a day on the go: a set of 5 individual Craft Instant Espresso sachets, plus the elegant 17 oz Day Off Tumbler from Kinto.",
         price: "42€",
         image: '/img/9.png',
-        category: "merchandising"
+        category: "merchandising",
+        stock: 20
     },
 ]
 
