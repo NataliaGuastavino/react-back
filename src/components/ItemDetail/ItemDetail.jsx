@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import {Card , Button} from 'react-bootstrap';
 import { ItemCount } from "../ItemCount/ItemCount"
 import { CartContext } from '../Context/CartContext';
+import { Link } from 'react-router-dom';
 
 export const ItemDetail = ({id, name, price, image, category, description, stock}) => {
     // Paso mediante props cada propiedad de los productos (objetos) y lo coloco por props en el retaurn
@@ -21,6 +22,7 @@ export const ItemDetail = ({id, name, price, image, category, description, stock
     const addToCart = () => {
         const newItem = {
             id,
+            name,
             description,
             image,
             price,
@@ -28,6 +30,12 @@ export const ItemDetail = ({id, name, price, image, category, description, stock
             counter
         }
         sumarCart (newItem)
+        Swal.fire({
+            icon: 'success',
+            title: 'Your purchase was successful!',
+            showConfirmButton: false,
+            timer: 1000
+        })
     }
 
     return (
@@ -42,6 +50,7 @@ export const ItemDetail = ({id, name, price, image, category, description, stock
                     <ItemCount max={stock} modify={setCounter} cantidad={counter} />
                     <Button onClick={addToCart} className='btn-black'>Add to cart</Button>
                     <Button onClick={turnBack} className='btn-black'>Turn back</Button>
+                    <Link to= "/cart" className='btn btn-info'>Go to cart</Link>
                 </Card.Body>
             </Card>
         </div>

@@ -18,6 +18,7 @@ export function NavBar() {
 {/*                 <Nav.Link href="#Cofee">Coffee</Nav.Link>
                     <Nav.Link href="#Brew Guides">Brew Guides</Nav.Link>
                     <Nav.Link href="#All products">All products</Nav.Link>*/}
+                    <Link className="link" to= "/cart"><CartWidget/></Link>
                 </Nav>
 
                 <Nav>
@@ -28,14 +29,3 @@ export function NavBar() {
         </Navbar>
     );
 }
-
-
-{/*          <Button color="black" handleClick={() => console.log("cofee")}>
-            Coffe
-            </Button>
-            <Button color="black" handleClick={() => console.log("Brew Guides")}>
-            Brew Guides
-            </Button>
-            <Button color="black" handleClick={() => console.log("All products")}>
-            All products
-</Button>*/}
