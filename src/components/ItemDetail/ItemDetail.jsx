@@ -4,6 +4,7 @@ import {Card , Button} from 'react-bootstrap';
 import { ItemCount } from "../ItemCount/ItemCount"
 import { CartContext } from '../Context/CartContext';
 import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 export const ItemDetail = ({id, name, price, image, category, description, stock}) => {
     // Paso mediante props cada propiedad de los productos (objetos) y lo coloco por props en el retaurn

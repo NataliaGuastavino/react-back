@@ -33,45 +33,48 @@ export const Checkout = () => {
         total_price: precioTotal (),
         data: firebase.firestore.Timestamp.fromDate(new Date())
         }
-        // Hago funcion para enviar la orden a firebase
-        const db = getFirestore ()
-        const ordenes = db.collection ('ordenes')
 
-        ordenes.add(orden)
-            .then ((res) =>{
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Your purchase was successful!',
-                    text: `Save your purchase number: ${res.id}`,
-                    willClose: () => {
-                    vaciarCarrito()
-                        }
-                    })
-                })
-                .finally(() => {
-                    console.log('Successful purchase!')
-                })
-        }
+    // Hago funcion para enviar la orden a firebase
+    const db = getFirestore ();
+    const ordenes = db.collection ('ordenes')
 
-        //Actualizo la cantidad en la base de datos
-        carrito.forEach ((item) =>{
-            const docRef = db.collection ('productos').doc (item.id)
+// Uso add para agregar una nueva orden a la coleccion ya creada
+ordenes.add (orden)
+    .then ((res) =>{
+        Swal.fire({
+            icon: 'success',
+            title: 'Your purchase was successful!',
+            text: `Save your purchase number: ${res.id}`,
+            willClose: () => {
+                emptyCart();
+            }
+        })
+    })
+    .finally(() => {
+        console.log('Successful purchase!');
+    })
 
-            docRef.get ()
-            .then ((doc) =>{
-                docRef.update ({
-                    stock: doc.data().stock - item.counter
-                })
+    //Actualizo la cantidad en la base de datos,
+    // ForEach: para recorrer toda la coleccion de la base de datos
+    carrito.forEach ((item) => {
+        const docRef = db.collection ('productos').doc (item.id);
+
+        docRef.get ()
+        .then ((doc) =>{
+            docRef.update ({
+                stock: doc.data().stock - item.counter
             })
-        })  
-    }   
+        })
+    })
+}
 
-    return (
+return (
     <div>
-        <h3>Terminar compra</h3>
+        <h3>Finish shopping</h3>
         <hr/>
 
         <form onSubmit={handleSubmit} className='conteiner mt-3'>
+            
             <div className="form-group">
                 <label htmlFor="email">Email</label>
                     <input type="text" className="form-control" onChange={(e) => setEmail
@@ -95,7 +98,8 @@ export const Checkout = () => {
             <button type='submit' className='btn btn-success'>Finish</button>
             <Link to="/cart" className="btn btn-info">Back to cart</Link>
         </form>
-
     </div>
     )
+}
+
 
