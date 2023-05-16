@@ -13,7 +13,7 @@ export const CartScreen = () => {
         <div className='container my-5'>
             {
                 cart.length === 0
-                ?<>
+                ? <>
                     <h3>Empty cart</h3>
                     <hr/>
                     <Link to="/" className='btn btn-sucess'></Link>
@@ -26,8 +26,8 @@ export const CartScreen = () => {
                     <>
                         <div className='listado'>
                             <p>Product: {prod.decription} </p>
-                            <p>€</p>
-                            <p>Cantidad:</p>
+                            <p>€{prod.price} </p>
+                            <p>Cantidad:{prod.counter}</p>
                         </div>
                         <Button className='btn btn-danger' onClick={() => removeItem (prod.id)}>
                             <TbTrashOff/>
@@ -40,7 +40,7 @@ export const CartScreen = () => {
             <hr/>
                 <Button className='btn btn-danger' onClick={emptyCart}>Empty Cart</Button>
                 <Link className='btn btn-success' to="/Chekout">
-                    Terminar compra 
+                    Finish shopping 
                 </Link>
             </>
             }

@@ -10,7 +10,7 @@ export const ItemCount = ({max, cantidad, modify}) =>{
         }
     }
 
-    const restar = ()  =>{
+    const restar = ()  => {
         if (cantidad >0){
             modify (cantidad -1)
         }
